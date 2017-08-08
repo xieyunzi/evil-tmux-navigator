@@ -25,7 +25,7 @@
   :group 'evil)
 
 ; Without unsetting C-h this is useless
-(global-unset-key (kbd "C-h"))
+(global-unset-key (kbd "M-h"))
 
 ; This requires windmove commands
 (when (fboundp 'windmove-default-keybindings)
@@ -49,22 +49,22 @@
     (substring direction 0 1)))
 
 (define-key evil-normal-state-map
-            (kbd "C-h")
+            (kbd "M-h")
             (lambda ()
               (interactive)
               (tmux-navigate "left")))
 (define-key evil-normal-state-map
-            (kbd "C-j")
+            (kbd "M-j")
             (lambda ()
               (interactive)
               (tmux-navigate "down")))
 (define-key evil-normal-state-map
-            (kbd "C-k")
+            (kbd "M-k")
             (lambda ()
               (interactive)
               (tmux-navigate "up")))
 (define-key evil-normal-state-map
-            (kbd "C-l")
+            (kbd "M-l")
             (lambda ()
               (interactive)
               (tmux-navigate "right")))
